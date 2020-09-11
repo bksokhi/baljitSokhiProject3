@@ -1,0 +1,168 @@
+.wrapper {
+  width: 80%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+header {
+  height: 90vh;
+}
+
+.room {
+  border: 2px solid red;
+}
+
+.room .wall {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: mediumaquamarine;
+  position: relative;
+  padding-top: 200px;
+  margin-bottom: 0;
+}
+
+.room .wall .bed {
+  width: 500px;
+}
+
+.room .wall .bed .bedFrame {
+  width: 400px;
+  position: relative;
+}
+
+.room .wall .bed .bedFrame .top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 400px;
+}
+
+.room .wall .bed .bedFrame .left,
+.room .wall .bed .bedFrame .right {
+  height: 200px;
+  width: 20px;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  border: solid darkgray;
+  z-index: 1;
+}
+
+.room .wall .bed .bedFrame .middle {
+  height: 90px;
+  width: calc(400px - 20px - 20px);
+  position: absolute;
+  right: 20px;
+  top: 25px;
+}
+
+.room .wall .bed .bedFrame .bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 20px;
+  width: 375px;
+  position: absolute;
+  left: 10px;
+}
+
+.room .wall .bed .bedFrame .bottom .bottomLeft,
+.room .wall .bed .bedFrame .bottom .bottomRight {
+  height: 60px;
+  width: 20px;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  border: solid darkgray;
+  z-index: 1;
+}
+
+.room .wall .bed .bedFrame .left,
+.room .wall .bed .bedFrame .right,
+.room .wall .bed .bedFrame .middle,
+.room .wall .bed .bedFrame .bottomLeft,
+.room .wall .bed .bedFrame .bottomRight {
+  background: black;
+}
+
+.room .wall .bed .mattress .mattressTop,
+.room .wall .bed .mattress .mattressBottom {
+  border: 5px solid #d7d4d4;
+  border-radius: 10px;
+  /* position: absolute;  */
+  background: white;
+}
+
+.room .wall .bed .mattress .mattressTop {
+  height: 100px;
+  width: calc(400px - 30px - 30px);
+  left: 25px;
+  position: absolute;
+  bottom: -20px;
+}
+
+.room .wall .bed .mattress .mattressBottom {
+  height: 40px;
+  width: calc(400px - 30px - 30px);
+  left: 25px;
+  position: absolute;
+  bottom: -50px;
+}
+
+.room .wall .table {
+  position: relative;
+  margin-top: 152px;
+}
+
+.room .wall .table .tableTop,
+.room .wall .table .tableFront,
+.room .wall .table .tableLeftLeg,
+.room .wall .table .tableRightLeg {
+  background: white;
+}
+
+.room .wall .table .tableTop {
+  width: 150px;
+  height: 40px;
+  border: 2px solid darkgrey;
+  position: absolute;
+  bottom: 50px;
+}
+
+.room .wall .table .tableFront {
+  width: 150px;
+  height: 20px;
+  border: 2px solid darkgrey;
+  position: absolute;
+  bottom: 33px;
+}
+
+.room .wall .table .legs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 150px;
+}
+
+.room .wall .table .tableLeftLeg,
+.room .wall .table .tableRightLeg {
+  width: 10px;
+  height: 50px;
+  border: 2px solid darkgray;
+}
+
+.room .floor {
+  height: 200px;
+  background: burlywood;
+}
