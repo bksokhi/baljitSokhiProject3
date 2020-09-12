@@ -14,18 +14,18 @@ $(document).ready(function () {
         
         $('.wall').css({ "background": `${userInput}` });
 
-        // if (userInput.length !== 0) {
-        //     $('li').text(`${userInput}`);
-        // }
-
-        let countOfLi = $('li').length;
-        if (userInput.length !== 0 && countOfLi < 3) {
-            $('ul').append(`<li>${userInput}</li>`);
+        if (userInput.length !== 0) {
+            $('li').text(`${userInput}`);
         }
 
-        if (countOfLi >= 3) {
-            $('li:first').text(`${userInput}`);
-        } 
+        // let countOfLi = $('li').length;
+        // if (userInput.length !== 0 && countOfLi < 3) {
+        //     $('ul').append(`<li>${userInput}</li>`);
+        // }
+
+        // if (countOfLi >= 3) {
+        //     $('li:first').text(`${userInput}`);
+        // } 
         $('input').val('');
     })
     

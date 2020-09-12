@@ -8,10 +8,6 @@ header {
   height: 90vh;
 }
 
-.room {
-  border: 2px solid red;
-}
-
 .room .wall {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -171,7 +167,6 @@ header {
 }
 
 .rightToolbar {
-  border: 3px solid blue;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -196,8 +191,11 @@ header {
           align-items: center;
 }
 
+.rightToolbar ul {
+  list-style: none;
+}
+
 .bottomToolbar {
-  border: 3px solid blue;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
