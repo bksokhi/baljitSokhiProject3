@@ -4,6 +4,7 @@
     .wall {
         display: flex;
         align-items: center;
+        justify-content: space-between;
         background: mediumaquamarine;
         position: relative;
         padding-top: 200px;
@@ -100,6 +101,7 @@
         .table {
             position: relative;
             margin-top: 152px;
+            // margin-left: -300px;
 
             .tableTop,
             .tableFront,

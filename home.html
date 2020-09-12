@@ -59,68 +59,78 @@
                         <div class="tableRightLeg"></div>
                     </div>
                 </div>
-            
+                
+                <section class="rightToolbar">
+                    <!-- right toolbar container -->
+                
+                    <!-- wall colour -->
+                    <form action="#" class="wallForm">
+                        <!-- sr-only? -->
+                
+                        <label for="wallColor">Wall Colour</label>
+                        <input type="text" class="wallColor" id="wallColor" name="wallColor" placeholder="#efefef">
+                    </form>
+                    
+                    <ul>
+                       <!-- <li></li> -->
+                    </ul>
+
+                    <!-- furniture shade -->
+                    <h3>Furniture Shade</h3>
+                
+                    <form action="#" class="furnitureForm">
+                
+                        <input type="radio" id="light" name="furnitureShade" value="light">
+                        <label for="light">Light</label>
+                
+                        <input type="radio" id="medium" name="furnitureShade" value="medium">
+                        <label for="medium">Medium</label>
+                
+                        <input type="radio" id="dark" name="furnitureShade" value="dark">
+                        <label for="dark">Dark</label>
+                
+                    </form>
+                
+                </section>
             </section>
             
             <!-- floor -->
-            <section class="floor"></section>
+            <section class="floor">
+
+                <section class="bottomToolbar">
+
+                    <!-- floor shade -->
+                    <h3>Floor Shade</h3>
+
+                    <form action="#" class="floorForm">
+                    
+                        <input type="radio" id="light" name="floorShade" value="light">
+                        <label for="light">Light</label>
+                    
+                        <input type="radio" id="medium" name="floorShade" value="medium">
+                        <label for="medium">Medium</label>
+                    
+                        <input type="radio" id="dark" name="floorShade" value="dark">
+                        <label for="dark">Dark</label>
+                    
+                    </form>
+
+                </section>
 
         </section>
 
-        <!-- right toolbar container -->
-        <section class="rightToolbar">
-
-            <!-- wall colour -->
-            <form action="#" class="wallForm">
-                <!-- sr-only? -->
-
-                <label for="wallColor">Wall Colour</label>
-                <input type="text" class="wallColor" id="wallColor" name="wallColor" placeholder="#efefef">
-            </form>
-
-            <!-- furniture shade -->
-            <h3>Furniture Shade</h3>
-
-            <form action="#" class="furnitureForm">
-
-                <input type="radio" id="light" name="furnitureShade" value="light">
-                <label for="light">Light</label>
-
-                <input type="radio" id="medium" name="furnitureShade" value="medium">
-                <label for="medium">Medium</label>
-
-                <input type="radio" id="dark" name="furnitureShade" value="dark">
-                <label for="dark">Dark</label>
-
-            </form>
-
         </section>
+
+        
 
         <!-- bottom toolbar container -->
-        <section class="bottomToolbar">
+        
 
-            <!-- floor shade -->
-            <h3>Floor Shade</h3>
-
-            <form action="#" class="floorForm">
-            
-                <input type="radio" id="light" name="floorShade" value="light">
-                <label for="light">Light</label>
-            
-                <input type="radio" id="medium" name="floorShade" value="medium">
-                <label for="medium">Medium</label>
-            
-                <input type="radio" id="dark" name="floorShade" value="dark">
-                <label for="dark">Dark</label>
-            
-            </form>
-
-        </section>
-
-
-
-        <script src='https://code.jquery.com/jquery-3.4.0.min.js' integrity='sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=' crossorigin='anonymous'></script>
     </main>
-    
+
+    <script src='https://code.jquery.com/jquery-3.4.0.min.js' integrity='sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=' crossorigin='anonymous'></script>
+
+    <script type="text/javascript" src="./scripts.js"></script>
+
 </body>
 </html>

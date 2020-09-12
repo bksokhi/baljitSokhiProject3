@@ -1,0 +1,25 @@
+.rightToolbar {
+    border: 3px solid blue;
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    margin-top: -300px;
+
+    .furnitureForm {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.bottomToolbar {
+    border: 3px solid blue;
+    display: flex;
+    justify-content: space-evenly;
+    width: 500px;
+
+    h3,
+    .floorForm {
+        margin-top: 150px;
+    }
+}
