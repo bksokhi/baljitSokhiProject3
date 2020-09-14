@@ -1,10 +1,11 @@
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
+  margin: 0;
 }
 
-main {
-  min-height: 100vh;
+body {
+  margin: 0;
 }
 
 .wrapper {
@@ -34,7 +35,8 @@ h3,
 h2,
 button,
 label,
-.wallColor {
+.wallColor,
+p {
   font-family: "Montserrat", sans-serif;
   font-size: 2.0rem;
 }
@@ -89,6 +91,28 @@ header .headerContainer {
           animation: fadeIn 3s;
 }
 
+header .headerContainer button {
+  background: #F0F0F0;
+  padding: 20px 20px;
+  text-decoration: none;
+}
+
+header .headerContainer button a {
+  padding: 20px 20px;
+  text-decoration: none;
+  color: black;
+}
+
+footer {
+  background: #888888;
+  color: white;
+  padding: 10px 0;
+}
+
+footer p {
+  margin: 0;
+}
+
 .room {
   background: #e0ece4;
 }
@@ -104,7 +128,7 @@ header .headerContainer {
       -ms-flex-pack: justify;
           justify-content: space-between;
   position: relative;
-  padding-top: 200px;
+  padding-top: 300px;
   margin-bottom: 0;
 }
 
@@ -247,7 +271,6 @@ header .headerContainer {
 }
 
 .room .floor {
-  height: 245px;
   background: #edc592;
 }
 

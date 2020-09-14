@@ -18,7 +18,30 @@ header {
         box-shadow:  20px 20px 56px #c9b7b0, 
         -20px -20px 56px #ffffff;
         animation: fadeIn 3s ;
+
+        button {
+            background: $backgroundColor;
+            padding: 20px 20px;
+            
+            text-decoration: none;
+
+            a {
+                padding: 20px 20px;
+                text-decoration: none;
+                color: black;
+            }
+        }
     }
 
+}
+
+footer {
+    background: $primaryFontColor;
+    color: white;
+    padding: 10px 0;
+    
+    p {
+        margin: 0;
+    }
 }
 
