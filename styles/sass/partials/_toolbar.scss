@@ -1,29 +1,90 @@
+[type="radio"] {
+    opacity: 0;
+    position: absolute;
+}
+
+.buttonLabel {
+    padding-left: 30px;
+    position: relative;
+    line-height: 40px;
+}
+
+.buttonLabel::before,
+.buttonLabel::after {
+    content: "";
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    left: 0;
+    top: 12.5px;
+    background: $styleColor;
+    border: 1px black solid;
+
+}
+
+[type="radio"]:checked + .buttonLabel::after {
+    background-color: $primaryFontColor;
+}
+
+[type="radio"]:focus + .buttonLabel::before,
+[type="radio"]:active + .buttonLabel::after {
+    background: black;
+}
+
+h3,
+.wallColorLabel{
+    font-size: 2.0rem;
+    border: 1px solid $primaryFontColor;
+    background: white;
+    padding: 10px;
+}
+
 .rightToolbar {
-    // border: 3px solid blue;
     display: flex;
     flex-direction: column;
+    align-content: flex-start;
     width: 200px;
-    margin-top: -300px;
+    margin-top: -200px;
+
+    .wallColor {
+        margin-top: 20px;
+    }
 
     .furnitureForm {
         display: flex;
         flex-direction: column;
-        align-items: center;
+        justify-content: space-between;
+        height: 150px;
     }
 
     ul {
         list-style: none;
+        padding: 0;
+
+        li {
+            font-family: $bodyFont;
+            font-size: 2.0rem;
+            background: white;
+            border: black 1px solid;
+
+        }
     }
 }
 
 .bottomToolbar {
     // border: 3px solid blue;
     display: flex;
-    justify-content: space-evenly;
-    width: 500px;
+    justify-content: space-between;
+    width: 600px;
 
     h3,
     .floorForm {
         margin-top: 150px;
+        display: flex;
+
+        .buttonLabel {
+            margin: 0 15px;
+            
+        }
     }
 }

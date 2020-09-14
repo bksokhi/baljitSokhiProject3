@@ -3,23 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&family=Montserrat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles/style.css">
     <title>What the colour?!</title>
 </head>
 <body>
 
     <header>
-        <h1>What The Colour?!</h1>
-        <h2>
-            <!-- tagline -->
-        </h2>
-        <button><a href="#">Get Started</a></button>
+        <div class="headerContainer">
+
+            <h1>What The Colour?!</h1>
+            <h2>
+                Test your paint colour selections by inputting their colour code below.
+            </h2>
+            <button><a href="#wallForm">Get Started</a></button>
+        </div>
     </header>
 
     <main>
     <!-- room container -->
-        <section class="room wrapper">
-            <section class="wall">
+        <section class="room">
+            <section class="wall wrapper">
             <!-- bed -->
                 <div class="bed">
             
@@ -64,11 +68,11 @@
                     <!-- right toolbar container -->
                 
                     <!-- wall colour -->
-                    <form action="#" class="wallForm">
+                    <form action="#" class="wallForm" id=wallForm>
                         <!-- sr-only? -->
                 
-                        <label for="wallColor">Wall Colour</label>
-                        <input type="text" class="wallColor" id="wallColor" name="wallColor" placeholder="#efefef">
+                        <label for="wallColor" class="wallColorLabel">Wall Colour</label>
+                        <input type="text" class="wallColor" id="wallColor" name="wallColor" placeholder="#e0ece4 / rgb(224, 236, 228)">
                     </form>
                     
                     <ul>
@@ -81,13 +85,13 @@
                     <form action="#" class="furnitureForm" id="furniture">
                 
                         <input type="radio" id="furnitureLight" name="furnitureShade" value="furnitureLight">
-                        <label for="furnitureLight">Light</label>
+                        <label for="furnitureLight" class="buttonLabel">Light</label>
                 
                         <input type="radio" id="furnitureMedium" name="furnitureShade" value="furnitureMedium">
-                        <label for="furnitureMedium">Medium</label>
+                        <label for="furnitureMedium" class="buttonLabel">Medium</label>
                 
                         <input type="radio" id="furnitureDark" name="furnitureShade" value="furnitureDark">
-                        <label for="furnitureDark">Dark</label>
+                        <label for="furnitureDark" class="buttonLabel">Dark</label>
                 
                     </form>
                 
@@ -96,30 +100,32 @@
             
             <!-- floor -->
             <section class="floor">
+                <div class="wrapper">
 
-                <section class="bottomToolbar">
-
-                    <!-- floor shade -->
-                    <h3>Floor Shade</h3>
-
-                    <form action="#" class="floorForm">
+                    <section class="bottomToolbar">
+                        
+                        <!-- floor shade -->
+                        <h3>Floor Shade</h3>
+                        
+                        <form action="#" class="floorForm">
+                            
+                            <input type="radio" id="floorLight" name="floorShade" value="floorLight">
+                            <label for="floorLight" class="buttonLabel">Light</label>
+                            
+                            <input type="radio" id="floorMedium" name="floorShade" value="floorMedium">
+                            <label for="floorMedium" class="buttonLabel">Medium</label>
+                            
+                            <input type="radio" id="floorDark" name="floorShade" value="floorDark">
+                            <label for="floorDark" class="buttonLabel">Dark</label>
+                            
+                        </form>
+                        
+                    </section>
                     
-                        <input type="radio" id="floorLight" name="floorShade" value="floorLight">
-                        <label for="floorLight">Light</label>
-                    
-                        <input type="radio" id="floorMedium" name="floorShade" value="floorMedium">
-                        <label for="floorMedium">Medium</label>
-                    
-                        <input type="radio" id="floorDark" name="floorShade" value="floorDark">
-                        <label for="floorDark">Dark</label>
-                    
-                    </form>
-
-                </section>
-
+                </div>
         </section>
 
-        </section>
+      
 
         
 
