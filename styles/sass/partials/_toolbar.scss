@@ -1,3 +1,5 @@
+// redesign radio buttons
+
 [type="radio"] {
     opacity: 0;
     position: absolute;
@@ -12,42 +14,60 @@
 .buttonLabel::before,
 .buttonLabel::after {
     content: "";
-    width: 15px;
-    height: 15px;
+    width: 20px;
+    height: 20px;
     position: absolute;
     left: 0;
-    top: 12.5px;
+    top: 10px;
     background: $styleColor;
-    border: 1px black solid;
+    border: 2px black solid;
 
 }
 
 [type="radio"]:checked + .buttonLabel::after {
-    background-color: $primaryFontColor;
+    background-color: $secondaryStyleColor;
+}
+
+[type="radio"]:active + .buttonLabel::before,
+[type="radio"]:active + .buttonLabel::after {
+    background: black;
 }
 
 [type="radio"]:focus + .buttonLabel::before,
-[type="radio"]:active + .buttonLabel::after {
-    background: black;
+[type="radio"]:focus + .buttonLabel::after{
+    border: 3px solid $secondaryStyleColor;
+}
+
+h3 {
+    width: auto;
 }
 
 h3,
 .wallColorLabel{
     font-size: 2.0rem;
     border: 1px solid $primaryFontColor;
-    background: white;
     padding: 10px;
+    border-radius: 9px;
+    background: linear-gradient(145deg, #e6d1c9, #ffffff);
 }
 
+
+// right toolbar layout/style
 .rightToolbar {
     display: flex;
     flex-direction: column;
-    align-content: flex-start;
+    align-items: flex-end;
     width: 200px;
     margin-top: -200px;
 
+    .wallForm {
+        text-align: right;
+    }
     .wallColor {
         margin-top: 20px;
+        font-family: $bodyFont;
+        font-size: 1.4rem;
+        line-height: 30px;
     }
 
     .furnitureForm {
@@ -55,6 +75,11 @@ h3,
         flex-direction: column;
         justify-content: space-between;
         height: 150px;
+        background: white;
+        border: 1px solid $primaryFontColor;
+        width: 100px;
+        padding: 5px;
+        margin-top: 10px;
     }
 
     ul {
@@ -63,28 +88,35 @@ h3,
 
         li {
             font-family: $bodyFont;
-            font-size: 2.0rem;
-            background: white;
-            border: black 1px solid;
-
+            font-size: 1.4rem;
+            line-height: 30px;
         }
     }
 }
 
+// bottom toolbar layout and style
 .bottomToolbar {
     // border: 3px solid blue;
     display: flex;
     justify-content: space-between;
     width: 600px;
+    
 
     h3,
     .floorForm {
         margin-top: 150px;
-        display: flex;
-
         .buttonLabel {
             margin: 0 15px;
             
         }
+    }
+
+    .floorForm {
+        background: white;
+        border: 1px solid $primaryFontColor;
+        height: 46px;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
     }
 }

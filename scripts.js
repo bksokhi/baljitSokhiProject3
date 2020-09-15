@@ -16,7 +16,9 @@ $(document).ready(function () {
 
         if (userInput.length !== 0) {
             $('li').text(`${userInput}`);
-        }
+            $('li').css({ background: 'white', padding: '5px 10px' });
+        } 
+        
 
         // let countOfLi = $('li').length;
         // if (userInput.length !== 0 && countOfLi < 3) {
@@ -33,7 +35,7 @@ $(document).ready(function () {
     // ● Target furniture css selectors via background - color to change color upon button
     // click
 
-    $('input[value="furnitureLight"]').prop('checked', true);
+    // $('input[value="furnitureLight"]').prop('checked', true);
     $('.furnitureForm input').on('click', function () {
         let furnitureShade = $('input[name=furnitureShade]:checked').val();
 
@@ -41,7 +43,7 @@ $(document).ready(function () {
             $('.left, .right, .middle, .bottomLeft, .bottomRight, .tableTop, .tableFront, .tableLeftLeg, .tableRightLeg').css({ "background": '#E8E3DD' });
 
         } else if (furnitureShade == 'furnitureMedium') {
-            $('.left, .right, .middle, .bottomLeft, .bottomRight, .tableTop, .tableFront, .tableLeftLeg, .tableRightLeg').css({ "background": '#724935' });
+            $('.left, .right, .middle, .bottomLeft, .bottomRight, .tableTop, .tableFront, .tableLeftLeg, .tableRightLeg').css({ "background": '#855E42' });
 
         } else if (furnitureShade == 'furnitureDark') {
             $('.left, .right, .middle, .bottomLeft, .bottomRight, .tableTop, .tableFront, .tableLeftLeg, .tableRightLeg').css({ "background": 'black' });
@@ -52,7 +54,8 @@ $(document).ready(function () {
     // ● Flooring radio buttons, create event listener on change
     // ● Target furniture css selectors via background - color to change color upon button
     // click
-    $('input[value="floorLight"]').prop('checked', true);
+
+    // $('input[value="floorLight"]').prop('checked', true);
     $('.floorForm input').on('click', function () {
         let floorShade = $('input[name=floorShade]:checked').val();
 

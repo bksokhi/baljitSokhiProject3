@@ -9,7 +9,7 @@ body {
 }
 
 .wrapper {
-    width: 85%;
+    width: 80%;
     max-width: 1280px;
     margin: 0 auto;
 }
@@ -36,13 +36,22 @@ h3,
     font-weight: 700;
 }
 
+
+
 h2,
 button,
-label,
-.wallColor,
-p {
+label {
     font-family: $bodyFont;
     font-size: 2.0rem;
+}
+
+p {
+    font-family: $bodyFont;
+    font-size: 1.5rem;
+}
+
+.buttonLabel {
+    font-size: 1.5rem;
 }
 
 

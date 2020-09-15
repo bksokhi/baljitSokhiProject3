@@ -19,18 +19,35 @@ header {
         -20px -20px 56px #ffffff;
         animation: fadeIn 3s ;
 
+        h1 {
+            color: $secondaryStyleColor;
+        }
+
+        h2 {
+            color: $primaryFontColor;
+        }
+
         button {
             background: $backgroundColor;
+            border: 2px solid white;
+            border-radius: 19px;
             padding: 20px 20px;
-            
             text-decoration: none;
+
 
             a {
                 padding: 20px 20px;
                 text-decoration: none;
-                color: black;
+                color: $primaryFontColor;
             }
         }
+
+        button:hover {
+                background: $secondaryStyleColor;
+                a{
+                    color: white;
+                }
+            }
     }
 
 }
@@ -40,8 +57,24 @@ footer {
     color: white;
     padding: 10px 0;
     
-    p {
-        margin: 0;
+    .footerContainer{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+        p {
+            margin: 0;
+        }
+        a {
+            font-size: 2.5rem;
+            margin-left: 15px;
+            text-decoration: none;
+            color: white;
+        }
+
+        a:hover {
+            color: $secondaryStyleColor;
+        }
     }
 }
 

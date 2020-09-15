@@ -9,7 +9,7 @@ body {
 }
 
 .wrapper {
-  width: 85%;
+  width: 80%;
   max-width: 1280px;
   margin: 0 auto;
 }
@@ -34,11 +34,18 @@ h3,
 
 h2,
 button,
-label,
-.wallColor,
-p {
+label {
   font-family: "Montserrat", sans-serif;
   font-size: 2.0rem;
+}
+
+p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem;
+}
+
+.buttonLabel {
+  font-size: 1.5rem;
 }
 
 @-webkit-keyframes fadeIn {
@@ -91,8 +98,18 @@ header .headerContainer {
           animation: fadeIn 3s;
 }
 
+header .headerContainer h1 {
+  color: #70ADB5;
+}
+
+header .headerContainer h2 {
+  color: #888888;
+}
+
 header .headerContainer button {
   background: #F0F0F0;
+  border: 2px solid white;
+  border-radius: 19px;
   padding: 20px 20px;
   text-decoration: none;
 }
@@ -100,7 +117,15 @@ header .headerContainer button {
 header .headerContainer button a {
   padding: 20px 20px;
   text-decoration: none;
-  color: black;
+  color: #888888;
+}
+
+header .headerContainer button:hover {
+  background: #70ADB5;
+}
+
+header .headerContainer button:hover a {
+  color: white;
 }
 
 footer {
@@ -109,8 +134,31 @@ footer {
   padding: 10px 0;
 }
 
-footer p {
+footer .footerContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .footerContainer p {
   margin: 0;
+}
+
+footer .footerContainer a {
+  font-size: 2.5rem;
+  margin-left: 15px;
+  text-decoration: none;
+  color: white;
+}
+
+footer .footerContainer a:hover {
+  color: #70ADB5;
 }
 
 .room {
@@ -205,7 +253,6 @@ footer p {
 .room .wall .bed .mattress .mattressBottom {
   border: 5px solid #d7d4d4;
   border-radius: 10px;
-  /* position: absolute;  */
   background: white;
 }
 
@@ -223,6 +270,28 @@ footer p {
   left: 25px;
   position: absolute;
   bottom: -50px;
+}
+
+.room .wall .bed .pillows {
+  width: calc(400px - 30px - 30px);
+  z-index: 0;
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  position: absolute;
+  left: 30px;
+  bottom: 60px;
+}
+
+.room .wall .bed .pillows div {
+  border: 5px solid #d7d4d4;
+  border-radius: 10px;
+  background: white;
+  width: 40%;
 }
 
 .room .wall .table {
@@ -288,30 +357,40 @@ footer p {
 .buttonLabel::before,
 .buttonLabel::after {
   content: "";
-  width: 15px;
-  height: 15px;
+  width: 20px;
+  height: 20px;
   position: absolute;
   left: 0;
-  top: 12.5px;
+  top: 10px;
   background: #FFE8DF;
-  border: 1px black solid;
+  border: 2px black solid;
 }
 
 [type="radio"]:checked + .buttonLabel::after {
-  background-color: #888888;
+  background-color: #70ADB5;
+}
+
+[type="radio"]:active + .buttonLabel::before,
+[type="radio"]:active + .buttonLabel::after {
+  background: black;
 }
 
 [type="radio"]:focus + .buttonLabel::before,
-[type="radio"]:active + .buttonLabel::after {
-  background: black;
+[type="radio"]:focus + .buttonLabel::after {
+  border: 3px solid #70ADB5;
+}
+
+h3 {
+  width: auto;
 }
 
 h3,
 .wallColorLabel {
   font-size: 2.0rem;
   border: 1px solid #888888;
-  background: white;
   padding: 10px;
+  border-radius: 9px;
+  background: linear-gradient(145deg, #e6d1c9, #ffffff);
 }
 
 .rightToolbar {
@@ -322,14 +401,22 @@ h3,
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -ms-flex-line-pack: start;
-      align-content: flex-start;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   width: 200px;
   margin-top: -200px;
 }
 
+.rightToolbar .wallForm {
+  text-align: right;
+}
+
 .rightToolbar .wallColor {
   margin-top: 20px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.4rem;
+  line-height: 30px;
 }
 
 .rightToolbar .furnitureForm {
@@ -344,6 +431,11 @@ h3,
       -ms-flex-pack: justify;
           justify-content: space-between;
   height: 150px;
+  background: white;
+  border: 1px solid #888888;
+  width: 100px;
+  padding: 5px;
+  margin-top: 10px;
 }
 
 .rightToolbar ul {
@@ -353,9 +445,8 @@ h3,
 
 .rightToolbar ul li {
   font-family: "Montserrat", sans-serif;
-  font-size: 2.0rem;
-  background: white;
-  border: black 1px solid;
+  font-size: 1.4rem;
+  line-height: 30px;
 }
 
 .bottomToolbar {
@@ -371,12 +462,89 @@ h3,
 .bottomToolbar h3,
 .bottomToolbar .floorForm {
   margin-top: 150px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
 }
 
 .bottomToolbar h3 .buttonLabel,
 .bottomToolbar .floorForm .buttonLabel {
   margin: 0 15px;
+}
+
+.bottomToolbar .floorForm {
+  background: white;
+  border: 1px solid #888888;
+  height: 46px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 850px) {
+  html {
+    font-size: 50%;
+  }
+  section .wall {
+    position: relative;
+  }
+  section .wall .rightToolbar {
+    position: absolute;
+    margin-top: -450px;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    width: 100%;
+  }
+  section .wall .rightToolbar .wallForm {
+    text-align: left;
+  }
+  section .wall .rightToolbar .furnitureForm {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;
+    height: 40px;
+  }
+  section .floor {
+    padding-top: 1px;
+  }
+  section .floor .bottomToolbar {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 100%;
+  }
+  section .floor .bottomToolbar .floorForm {
+    margin: 10px auto;
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .buttonLabel {
+    margin: 0;
+  }
+  .table {
+    display: none;
+  }
+}
+
+@media (max-width: 490px) {
+  header {
+    min-height: 50vh;
+  }
+  header .headerContainer {
+    padding: 30px;
+  }
+  header .headerContainer button {
+    padding: 15px;
+  }
 }
